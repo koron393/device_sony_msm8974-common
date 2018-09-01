@@ -64,7 +64,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service
 
-# Camera (stock blobs)
+# Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl
@@ -76,6 +76,9 @@ PRODUCT_PACKAGES += \
     libsonycamera \
     libshim_camera \
     libshim_cald
+
+PRODUCT_COPY_FILES += \
+    $(PLATFORM_PATH)/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
 # Display
 PRODUCT_PACKAGES += \
