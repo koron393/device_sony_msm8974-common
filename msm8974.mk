@@ -114,10 +114,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1-service-qti
 
 # GPS
-PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps_debug.conf \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
-
 PRODUCT_PACKAGES += \
     libgps.utils \
     libgnss \
@@ -125,7 +121,8 @@ PRODUCT_PACKAGES += \
     libloc_core \
     libloc_api_v02 \
     libloc_ds_api \
-    liblocation_api
+    liblocation_api \
+    gps.conf
 
 # Health
 PRODUCT_PACKAGES += \
@@ -187,7 +184,8 @@ PRODUCT_PACKAGES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.ethernet.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.ethernet.xml
+    frameworks/native/data/etc/android.hardware.ethernet.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.ethernet.xml \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Power
 PRODUCT_PACKAGES += \
